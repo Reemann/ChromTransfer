@@ -43,8 +43,9 @@ pip install torch pandas numpy scikit-learn tqdm scanpy h5py
 
 Download data/ from Figshare (https://doi.org/10.6084/m9.figshare.31972113) and place the files under /data in your ChromTransfer repository directory. 
 ```
-cd ${YOUR_PATH_TO_ChromTransfer}/data
-rm -r * ### delete the existing empty folders in data directory from this repository
+cd ${YOUR_PATH_TO_ChromTransfer}
+mkdir data
+cd data
 
 # download cobinding_TF_source.tar.gz
 curl -L -o cobinding_TF_source.tar.gz "https://ndownloader.figshare.com/files/63597297"
@@ -97,7 +98,9 @@ ${YOUR_PATH_TO_ChromTransfer}/
 Download demo.tar.gz from Figshare (https://doi.org/10.6084/m9.figshare.31972113) and place it under your ChromTransfer repository directory. 
 ```
 cd ${YOUR_PATH_TO_ChromTransfer}
-rm -r demo ### delete the existing empty demo directory from this repository
+mkdir demo
+cd demo
+
 curl -L -o demo.tar.gz "https://figshare.com/ndownloader/files/63608829"
 tar -xzvf demo.tar.gz
 ```
