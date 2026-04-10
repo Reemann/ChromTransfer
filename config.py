@@ -10,10 +10,10 @@ class Config:
         # =========================================================================
 
         # Absolute path to the ChromTransfer directory on your machine
-        self.YOUR_PATH_TO_ChromTransfer = '/mnt/Storage/home/wangyiman/crossSpecies_TF_bindingSite_prediction/bin_for_GitHub'
+        self.YOUR_PATH_TO_ChromTransfer = '/YOUR_PATH_TO_ChromTransfer/ChromTransfer'
 
         # Absolute path to the directory to save the model and predictions
-        self.output_dir = "/mnt/Storage/home/wangyiman/crossSpecies_TF_bindingSite_prediction/bin_for_GitHub/demo/3.predict"
+        self.output_dir = "/YOUR_PATH_TO_ChromTransfer/ChromTransfer/demo/1.preprocess_data"
 
         self.tf = "SOX2"  # TF to predict (must be uppercase)
 
@@ -21,7 +21,7 @@ class Config:
         self.target_species = "hg38"  # or "mm10"
 
         # Absolute path to the BED-format peak file for TF binding sites in the source species
-        self.peak_file_source = "/mnt/Storage/home/wangyiman/crossSpecies_TF_bindingSite_prediction/bin_for_GitHub/demo/1.preprocess_data/GSM307138.narrowPeak.bed"
+        self.peak_file_source = "/YOUR_PATH_TO_ChromTransfer/ChromTransfer/demo/1.preprocess_data/GSM307138.narrowPeak.bed"
 
         # =========================================================================
         # OPTIONAL PARAMETERS

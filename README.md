@@ -39,15 +39,31 @@ pip install torch pandas numpy scikit-learn tqdm scanpy h5py
 
 ---
 
-## 2. Download Required Data from ZENODO (DOI:10.5281/zenodo.19449463)
+## 2. Download Required Data from Figshare (https://doi.org/10.6084/m9.figshare.31972113)
 
-Download data.tar.gz from ZENODO (DOI:10.5281/zenodo.19449463) and place it under your ChromTransfer repository directory. 
+Download data/ from Figshare (https://doi.org/10.6084/m9.figshare.31972113) and place the files under /data in your ChromTransfer repository directory. 
 ```
-# decompress data.tar.gz
-cd ${YOUR_PATH_TO_ChromTransfer}
-rm -r data
-curl -L -o data.tar.gz "https://zenodo.org/records/19449463/files/data.tar.gz?download=1"
-tar -xzvf data.tar.gz
+cd ${YOUR_PATH_TO_ChromTransfer}/data
+
+# download cobinding_TF_source.tar.gz
+curl -L -o cobinding_TF_source.tar.gz "https://ndownloader.figshare.com/files/63597297"
+tar -xzvf cobinding_TF_source.tar.gz
+
+# download DNA.tar.gz
+curl -L -o DNA.tar.gz "https://figshare.com/ndownloader/files/63597807"
+tar -xzvf DNA.tar.gz
+
+# download FUNCODE.tar.gz
+curl -L -o FUNCODE.tar.gz "https://figshare.com/ndownloader/files/63598410"
+tar -xzvf FUNCODE.tar.gz
+
+# download regions.tar.gz
+curl -L -o regions.tar.gz "https://figshare.com/ndownloader/files/63600303"
+tar -xzvf regions.tar.gz
+
+# download Regulatory.tar.gz
+curl -L -o Regulatory.tar.gz "https://figshare.com/ndownloader/files/63600441"
+tar -xzvf Regulatory.tar.gz
 ```
 The expected directory structure is:
 
@@ -77,14 +93,21 @@ ${YOUR_PATH_TO_ChromTransfer}/
 ```
 
 ## (Optional) Download Demo Files to Get a Quick Start of ChromTransfer:
-Download demo.tar.gz from ZENODO (DOI:10.5281/zenodo.19449463) and place it under your ChromTransfer repository directory. 
+Download demo.tar.gz from Figshare (https://doi.org/10.6084/m9.figshare.31972113) and place it under your ChromTransfer repository directory. 
 ```
-# decompress demo.tar.gz
-tar -xzvf demo.tar.gz
 cd ${YOUR_PATH_TO_ChromTransfer}
-rm -r demo
-curl -L -o demo.tar.gz "https://zenodo.org/records/19449463/files/demo.tar.gz?download=1"
+rm -r demo ### delete the existing empty demo directory from this repository
+curl -L -o demo.tar.gz "https://figshare.com/ndownloader/files/63608829"
 tar -xzvf demo.tar.gz
+```
+The expected directory structure is:
+
+```
+${YOUR_PATH_TO_ChromTransfer}/
+└── demo/
+    ├── 1.preprocess_data/
+    ├── 2.train_model/
+    └── 3.predict/
 ```
 ---
 
